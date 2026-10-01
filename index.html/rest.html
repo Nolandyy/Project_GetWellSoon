@@ -32,13 +32,13 @@
             <p>You deserve it after a day of progress.</p>
             <hr>
             <p>Psst... Click the button when you're ready to start again.</p>
+            <a href="index.html" onclick="newDay(); return false;">➕</a>
             <script>
                 function newDay() {
                     localStorage.setItem('prevHealthP', localStorage.getItem('finalHealthP'));
                     localStorage.removeItem('finalHealthP');
                 }
             </script>
-            <a href="index.html" onclick="newDay(); return false;">➕</a>
             <br/>
             <span style='display: none;'>
                 <p>Or... click here to test your progress, adventurer:</p>
