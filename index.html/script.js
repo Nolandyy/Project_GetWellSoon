@@ -110,3 +110,8 @@ function endDayF() {
         localStorage.setItem('prevHealthP', 0)
     }
 };
+
+function newDay() {
+    localStorage.setItem('prevHealthP', localStorage.getItem('finalHealthP'));
+    localStorage.removeItem('finalHealthP');
+}
