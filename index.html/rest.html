@@ -5,13 +5,9 @@
         <title>Rest-Site</title>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <script type="text/javascript" src="./script.js">
-    </script>
         <!--Quick message from the team: The AI changed absoulutely nothing. All it helped with was getting that pacifico font. Thank you.-->
     </head>
     <body>
-        <script type="text/javascript" src="./script.js">
-    </script>
         <h1 class="banner">'Progress is Progress'</h1>
         <p class="under-banner">Welcome to the rest page... (U_U)</p>
         <hr>
@@ -34,6 +30,12 @@
             <p>You deserve it after a day of progress.</p>
             <hr>
             <p>Psst... Click the button when you're ready to start again.</p>
+            <script>
+                function newDay() {
+                    localStorage.setItem('prevHealthP', localStorage.getItem('finalHealthP'));
+                    localStorage.removeItem('finalHealthP');
+                }
+            </script>
             <button onclick="newDay()"><a href="index.html">➕ </a></button>
             <br/>
             <span style='display: none;'>
