@@ -99,11 +99,17 @@ document.getElementById("submitOwn").addEventListener("click", () => {
 
 function pickRandom() {
     const paraItems = document.querySelectorAll("#factGraphList li");
+    const result = document.getElementById("result");
+
+    if (!paraItems.length || !result) {
+        return;
+    }
+
     const factRandomizer = Math.floor(Math.random() * paraItems.length);
-    document.getElementById("result").textContent = paraItems[factRandomizer].textContent;
+    result.textContent = paraItems[factRandomizer].textContent;
 }
 
-window.onLoad = pickRandom()
+window.addEventListener("load", pickRandom);
 
 function endDayF() {
     localStorage.setItem("finalHealthP", healthPoints);
