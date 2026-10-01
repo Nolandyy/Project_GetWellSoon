@@ -110,16 +110,3 @@ function pickRandom() {
 }
 
 window.addEventListener("load", pickRandom);
-
-function endDayF() {
-    localStorage.setItem("finalHealthP", healthPoints);
-    console.log(JSON.parse(localStorage.getItem('finalHealthP')));
-    if (localStorage.getItem('prevHealthP') === null) {
-        localStorage.setItem('prevHealthP', 0)
-    }
-};
-
-function newDay() {
-    localStorage.setItem('prevHealthP', localStorage.getItem('finalHealthP'));
-    localStorage.removeItem('finalHealthP');
-}
