@@ -5,8 +5,6 @@
 
     console.log(healthPoints);
 
-    let actionItem = document.getElementById('answer').value;
-
     function updateDisplay() {
         document.getElementById("healthPoints").innerHTML = Number(healthPoints);
     }
