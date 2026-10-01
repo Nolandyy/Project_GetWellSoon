@@ -18,7 +18,7 @@
 
             <script>
             const finalPoints = Number(localStorage.getItem('finalHealthP'));
-            document.getElementById("endDayV").textContent = finalPoints + " Points (" + Number(finalPoints - Number(localStorage.getItem('prevHealthP'))) + "Points more than last time";
+            document.getElementById("endDayV").textContent = finalPoints + " Points (" + ") Points more than last time";
                 if (finalPoints <= 1.25) {
                     document.getElementById("extraComment").textContent = "Don't fret! You took a step forward!"
                 } else if (finalPoints <= 1.75) {
