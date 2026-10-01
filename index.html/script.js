@@ -11,18 +11,11 @@
         document.getElementById("healthPoints").innerHTML = Number(healthPoints);
     }
 
-    function addRow() {
-        actionItem = document.getElementById('answer').value;
-        console.log(actionItem);
-        const table = document.getElementById('actionList');
-        const newRow = document.createElement('tr')
-        const newItem = document.createElement('td');
-        const newItemPoint = document.createElement('td')
-        newItem.textContent = document.getElementById('answer').value;
-        newItemPoint.textContent = Number(pointGainedRecently);
-        table.appendChild(newRow);
-        newRow.appendChild(newItem);
-        newRow.appendChild(newItemPoint);
+    function addRow(action) {
+        const table = document.getElementById("actionList");
+        const newRow = table.insertRow();
+        newRow.insertCell().textContent = action;
+        newRow.insertCell().textContent = pointGainedRecently;
     }
 
     function addRowS(x) {
@@ -88,11 +81,12 @@
     });
 
 document.getElementById("submitOwn").addEventListener("click", () => {
-    if (document.getElementById('answer').value != "") {
-        console.log(healthPoints += 1)
+    const answer = document.getElementById("answer").value.trim();
+    if (answer !== "") {
         pointGainedRecently = 1;
-        updateDisplay()
-        addRow()
+        healthPoints += 1;
+        updateDisplay();
+        addRow(answer);
 }});
 
 //skip past this ^
