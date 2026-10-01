@@ -18,7 +18,7 @@
 
             <script>
             const finalPoints = Number(localStorage.getItem('finalHealthP'));
-            document.getElementById("endDayV").textContent = finalPoints + " Points " + "(" + (finalPoints - Number(localStorage.getItem('prevHealthP'))) + ")";
+            document.getElementById("endDayV").textContent = finalPoints + " Points (" + Number(finalPoints - Number(localStorage.getItem('prevHealthP'))) + "Points more than last time";
                 if (finalPoints <= 1.25) {
                     document.getElementById("extraComment").textContent = "Don't fret! You took a step forward!"
                 } else if (finalPoints <= 1.75) {
@@ -38,6 +38,7 @@
                 function newDay() {
                     localStorage.setItem('prevHealthP', localStorage.getItem('finalHealthP'));
                     localStorage.removeItem('finalHealthP');
+                    window.location.href= 'index.html';
                 }
             </script>
             <br/>
