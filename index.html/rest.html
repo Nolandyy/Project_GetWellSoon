@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Rest-Site</title>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <!--Quick message from the team: The AI changed absoulutely nothing. All it helped with was getting that pacifico font. Thank you.-->
+    </head>
+    <body>
+        <script type="text/javascript" src="script.js">
+    </script>
+        <h1 class="banner">'Progress is Progress'</h1>
+        <p class="under-banner">Welcome to the rest page... (U_U)</p>
+        <hr>
+        <div>
+            <h2>Your Final Points Were:</h2>
+            <script>
+                document.getElementById("endDayV").textContent = Number(localStorage.getItem('finalHealthP')) + " Points " + "(" + (Number(localStorage.getItem('finalHealthP')) - Number(localStorage.getItem('prevHealthP'))) + "-Point Difference From Last Time!)";
+                if (JSON.parse(localStorage.getItem('finalHealthP')) <= 1.25) {
+                    document.getElementById("extraComment").textContent = "Don't fret! You took a step forward!"
+                } else if (JSON.parse(localStorage.getItem('finalHealthP')) <= 1.75) {
+                    document.getElementById("extraComment").textContent = "That's the spirit, pal!"
+                } else if (JSON.parse(localStorage.getItem('finalHealthP')) >= 2) {
+                    document.getElementById("extraComment").textContent = "Ooh~ You made progress with your own suggestion! Extra cool."
+                }
+            </script>
+            <p style="text-style: italic;" id="endDayV"></p>
+            <p id="extraComment"></p>
+            <hr>
+            <h2>Take A Rest.</h2>
+            <p>You deserve it after a day of progress.</p>
+            <hr>
+            <p>Psst... Click the button when you're ready to start again.</p>
+            <button onclick="newDay()"><a href="/index.html">➕ </a></button>
+            <br/>
+            <span style='display: none;'>
+                <p>Or... click here to test your progress, adventurer:</p>
+                <script>
+                    function testStrength(x) {
+                        const statList = document.getElementById("statButton")
+                        const str = "Strength: " + Math.ceil(Math.random() * x * 10);
+                        const def = "Defense: " + Math.ceil(Math.random() * x * 10);
+                        const spd = "Speed: " + Math.ceil(Math.random() * x * 10);
+                        const rolledStat1 = document.createElement("p");
+                        rolledStat1.textContent = str;
+                        const rolledStat2 = document.createElement("p");
+                        rolledStat2.textContent = def;
+                        const rolledStat3 = document.createElement("p");
+                        rolledStat3.textContent = spd;
+                        statList.parentNode.replaceChild(rolledStat1, statList);
+                        rolledStat1.appendChild(rolledStat2);
+                        rolledStat1.appendChild(rolledStat3);
+                    }
+                </script>
+                <button onclick="testStrength(JSON.parse(localStorage.getItem('finalHealthP')))" id="statButton">???</button>
+            </span>
+        </div>
+    </body>
+
+</html>

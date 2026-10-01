@@ -1,0 +1,78 @@
+.banner {
+    background: linear-gradient(to bottom, #58C6A5, #38997E);
+    padding: 10vh 0vh 10vh 5vw;
+    color: #ffffff;
+    margin-bottom: -5vh;
+}
+
+.under-banner {
+    background-color: #2A6A5B;
+    color: white;
+    text-align: center;
+    padding: 2.5vh 0vh 2.5vh 0vh;
+    font-family: Pacifico, cursive;
+    position: sticky;
+    top: 0px;
+}
+
+.choice-section {
+    padding: 0vh 1.25vw 2vh 1.25vw;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin-right: 20%;
+    background: #2A6A5B;
+    background-clip: border-box;
+    display: inline-block;
+}
+
+.choice {
+    background: #58C6A5;
+    display: inline-block;
+    text-align: center;
+    padding: 1% 1% 1% 1%;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.choice:hover {
+    background: #3CB490;
+}
+
+.points-section {
+    text-align: right;
+    font-style: italic;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+font-family: Arial, sans-serif;
+}
+th, td {
+border: 1px solid #ddd;
+padding: 10px;
+text-align: left;
+}
+th {
+background-color: #f4f4f4;
+}
+
+.end-day-section {
+    text-align: right;
+}
+
+.confirm-end {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.confirm-end:hover {
+    background: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

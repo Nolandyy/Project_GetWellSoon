@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--Quick message from the team: The AI changed absoulutely nothing. All it helped with was getting that pacifico font. Thank you.-->
+</head>
+
+<body>
+    <script type="text/javascript" src="script.js">
+    </script>
+    <h1 class="banner">'Progress is Progress'</h1>
+    <p class="under-banner">Welcome Back!</p>
+    <hr>
+    <div>
+        <h2>What would you like to do today?</h2>
+        <h4>Remember, there's always another day for you to make progress!</h4>
+        <div class="choice-section">
+        <!--Choices Here-->
+            <p class="choice" id="one">Go On A Walk</p>
+            <p class="choice" id="two">Meditate</p>
+            <p class="choice" id="three">Work On A Project</p>
+            <br/>
+            <form class="choice">
+                <label>Add Something Else?</label>
+                <br/>
+                <br/>
+                <input type="text" id="answer"/>
+                <input type="button" value="Submit (+1 Point!)" id="submitOwn"/>
+            </form>
+        </div>
+        <div class="points-section">
+            <p>Points Accumulated:</p>
+            <p id="healthPoints">1</p>
+        </div>
+    </div>
+    <hr>
+    <h2>Looking back at today you...</h2>
+    <table id="actionList">
+        <tr>
+            <th>Actions</th>
+            <th>Points Gained</th>
+        </tr>
+        <tr>
+            <td>Went to sleep and woke up</td>
+            <td>1</td>
+        </tr>
+    </table>
+    <hr>
+    <div>
+        <h2>Did You Know?</h2>
+        <ul id="factGraphList" style="display:none;">
+            <li>Even just givng yourself a bit more rest, or letting yourself do some sightseeing around your town could be a stepping stone for your mental health's improvement.</li>
+            <li>I want to tell you so many things, but I don't wanna bore you so here are three words of wisdom: <b>"Nevergiveup,"</b> <b>"Yougotthis,"</b> and <b>"Youwon'tdisappoint."</b></li>
+            <li>'Get Well Soon!', this very website, was made by a small team of academic students. Even if they were late, they still perservered! Progress won't ever stop until you stop trying.</li>
+            <li>Humor is a real mood booster! You, and everyone else, deserve at least a million laughs and smiles before they go.</li>
+        </ul>
+        <span style="text-indent: 30px;">
+            <p id="result"></p>
+            <p style="font-style: italic;">(Remember, improvement doesn't always need to have grandiose or large changes, it can start small like picking up a new hobby.)</p>
+        </span>
+    </div>
+    <hr>
+    <div class="end-day-section">
+        <h2>End The Day?</h2>
+        <button class="confirm-end" id="endDay" onclick="endDayF()"><a href="/rest.html">✅</a></button>
+    </div>
+</body>
+
+</html>
